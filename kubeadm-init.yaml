@@ -1,0 +1,24 @@
+apiVersion: kubeadm.k8s.io/v1alpha1
+kind: MasterConfiguration
+kubernetesVersion: v1.9.1
+networking:
+  podSubnet: 10.244.0.0/16
+apiServerCertSANs:
+- hb-master01
+- hb-master02
+- hb-master03
+- hb-master04
+- 192.168.5.246
+- 192.168.5.247
+- 192.168.5.248
+- 192.168.5.249
+- 192.168.5.245
+- 127.0.0.1
+etcd:
+  endpoints:
+  - http://192.168.5.246:2379
+  - http://192.168.5.247:2379
+  - http://192.168.5.248:2379
+  - http://192.168.5.249:2379
+token: 4ae6cb.9dbc7b3600a3de89
+tokenTTL: "0"

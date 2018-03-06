@@ -3,13 +3,13 @@
 # local machine ip address
 export K8SHA_IPLOCAL=192.168.5.246
 
-# local machine etcd name, options: etcd1, etcd2, etcd3, etcd4
+# local machine etcd name, options: etcd1, etcd2, etcd3, etcd4, etcd5
 export K8SHA_ETCDNAME=etcd1
 
 # local machine keepalived state config, options: MASTER, BACKUP. One keepalived cluster only one MASTER, other's are BACKUP
 export K8SHA_KA_STATE=MASTER
 
-# local machine keepalived priority config, options: 102, 101, 100, 99. MASTER must 102
+# local machine keepalived priority config, options: 102, 101, 100, 99, 98. MASTER must 102
 export K8SHA_KA_PRIO=102
 
 # local machine keepalived network interface name config, for example: eth0
@@ -34,6 +34,9 @@ export K8SHA_IP3=192.168.5.248
 # master04 ip address
 export K8SHA_IP4=192.168.5.249
 
+# master05 ip address
+export K8SHA_IP5=192.168.5.250
+
 # master01 hostname
 export K8SHA_HOSTNAME1=hb-master01
 
@@ -46,8 +49,11 @@ export K8SHA_HOSTNAME3=hb-master03
 # master04 hostname
 export K8SHA_HOSTNAME4=hb-master04
 
+# master04 hostname
+export K8SHA_HOSTNAME4=hb-master05
+
 # keepalived auth_pass config, all masters must be same
-export K8SHA_KA_AUTH=55df7dc334c90194d1600c483e10ad1d
+export K8SHA_KA_AUTH=55df7dc334c90194d1600c483e10acfr
 
 # kubernetes cluster token, you can use 'kubeadm token generate' to get a new one
 export K8SHA_TOKEN=4ae6cb.9dbc7b3600a3de89
@@ -68,6 +74,7 @@ sed \
 -e "s/K8SHA_IP2/$K8SHA_IP2/g" \
 -e "s/K8SHA_IP3/$K8SHA_IP3/g" \
 -e "s/K8SHA_IP4/$K8SHA_IP4/g" \
+-e "s/K8SHA_IP4/$K8SHA_IP5/g" \
 etcd/docker-compose.yaml.tpl > etcd/docker-compose.yaml
 
 echo 'set etcd cluster docker-compose.yaml file success: etcd/docker-compose.yaml'
@@ -104,11 +111,13 @@ sed \
 -e "s/K8SHA_HOSTNAME2/$K8SHA_HOSTNAME2/g" \
 -e "s/K8SHA_HOSTNAME3/$K8SHA_HOSTNAME3/g" \
 -e "s/K8SHA_HOSTNAME4/$K8SHA_HOSTNAME4/g" \
+-e "s/K8SHA_HOSTNAME4/$K8SHA_HOSTNAME5/g" \
 -e "s/K8SHA_IP1/$K8SHA_IP1/g" \
 -e "s/K8SHA_IP2/$K8SHA_IP2/g" \
 -e "s/K8SHA_IP3/$K8SHA_IP3/g" \
 -e "s/K8SHA_IP3/$K8SHA_IP3/g" \
 -e "s/K8SHA_IP4/$K8SHA_IP4/g" \
+-e "s/K8SHA_IP4/$K8SHA_IP5/g" \
 -e "s/K8SHA_IPVIRTUAL/$K8SHA_IPVIRTUAL/g" \
 -e "s/K8SHA_TOKEN/$K8SHA_TOKEN/g" \
 -e "s/K8SHA_CIDR/$K8SHA_CIDR/g" \

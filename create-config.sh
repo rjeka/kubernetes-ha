@@ -55,6 +55,9 @@ export K8SHA_HOSTNAME4=hb-master05
 # keepalived auth_pass config, all masters must be same
 export K8SHA_KA_AUTH=55df8dc654c90194d1600c483e10abfr
 
+#etcd tocken:
+export ETCD_TOKEN=9488af68bbee1b9ae037d6fd9e7efefd
+
 # kubernetes cluster token, you can use 'kubeadm token generate' to get a new one
 export K8SHA_TOKEN=23a485.42ec1111963c9988
 
@@ -75,6 +78,7 @@ sed \
 -e "s/K8SHA_IP3/$K8SHA_IP3/g" \
 -e "s/K8SHA_IP4/$K8SHA_IP4/g" \
 -e "s/K8SHA_IP5/$K8SHA_IP5/g" \
+-e "s/ETCD_TOKEN/$ETCD_TOKEN/g" \
 etcd/docker-compose.yaml.tpl > etcd/docker-compose.yaml
 
 echo 'set etcd cluster docker-compose.yaml file success: etcd/docker-compose.yaml'

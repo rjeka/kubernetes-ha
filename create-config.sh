@@ -31,6 +31,12 @@ export K8SHA_IP2=172.26.133.22
 # master03 ip address
 export K8SHA_IP3=172.26.133.23
 
+# master04 ip address
+export K8SHA_IP4=172.26.133.24
+
+# master05 ip address
+export K8SHA_IP5=172.26.133.25
+
 # master01 hostname
 export K8SHA_HOSTNAME1=hb-master01
 
@@ -39,6 +45,12 @@ export K8SHA_HOSTNAME2=hb-master02
 
 # master03 hostname
 export K8SHA_HOSTNAME3=hb-master03
+
+# master04 hostname
+export K8SHA_HOSTNAME4=hb-master04
+
+# master04 hostname
+export K8SHA_HOSTNAME4=hb-master05
 
 # keepalived auth_pass config, all masters must be same
 export K8SHA_KA_AUTH=55df8dc654c90194d1600c483e10abfr
@@ -64,6 +76,8 @@ sed \
 -e "s/K8SHA_IP1/$K8SHA_IP1/g" \
 -e "s/K8SHA_IP2/$K8SHA_IP2/g" \
 -e "s/K8SHA_IP3/$K8SHA_IP3/g" \
+-e "s/K8SHA_IP4/$K8SHA_IP4/g" \
+-e "s/K8SHA_IP5/$K8SHA_IP5/g" \
 -e "s/ETCD_TOKEN/$ETCD_TOKEN/g" \
 etcd/docker-compose.yaml.tpl > etcd/docker-compose.yaml
 
@@ -90,6 +104,7 @@ sed \
 -e "s/K8SHA_IP1/$K8SHA_IP1/g" \
 -e "s/K8SHA_IP2/$K8SHA_IP2/g" \
 -e "s/K8SHA_IP3/$K8SHA_IP3/g" \
+-e "s/K8SHA_IP3/$K8SHA_IP4/g" \
 nginx-lb/nginx-lb.conf.tpl > nginx-lb/nginx-lb.conf
 
 echo 'set nginx load balancer config file success: nginx-lb/nginx-lb.conf'
@@ -99,9 +114,14 @@ sed \
 -e "s/K8SHA_HOSTNAME1/$K8SHA_HOSTNAME1/g" \
 -e "s/K8SHA_HOSTNAME2/$K8SHA_HOSTNAME2/g" \
 -e "s/K8SHA_HOSTNAME3/$K8SHA_HOSTNAME3/g" \
+-e "s/K8SHA_HOSTNAME4/$K8SHA_HOSTNAME4/g" \
+-e "s/K8SHA_HOSTNAME4/$K8SHA_HOSTNAME5/g" \
 -e "s/K8SHA_IP1/$K8SHA_IP1/g" \
 -e "s/K8SHA_IP2/$K8SHA_IP2/g" \
 -e "s/K8SHA_IP3/$K8SHA_IP3/g" \
+-e "s/K8SHA_IP3/$K8SHA_IP3/g" \
+-e "s/K8SHA_IP4/$K8SHA_IP4/g" \
+-e "s/K8SHA_IP4/$K8SHA_IP5/g" \
 -e "s/K8SHA_IPVIRTUAL/$K8SHA_IPVIRTUAL/g" \
 -e "s/K8SHA_TOKEN/$K8SHA_TOKEN/g" \
 -e "s/K8SHA_CIDR/$K8SHA_CIDR/g" \

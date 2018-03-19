@@ -17,7 +17,7 @@ services:
       --listen-client-urls=http://0.0.0.0:2379,http://0.0.0.0:4001 \
       --initial-advertise-peer-urls=http://172.26.133.21:2380 \
       --listen-peer-urls=http://0.0.0.0:2380 \
-      --initial-cluster-token=9488af68bbee1b9ae037d6fd9e7efefd \
+      --initial-cluster-token=23a485.42ec1111963c9988 \
       --initial-cluster=etcd1=http://172.26.133.21:2380,etcd2=http://172.26.133.22:2380,etcd3=http://172.26.133.23:2380,etcd4=http://172.26.133.24:2380,etcd5=http://172.26.133.25:2380 \
       --initial-cluster-state=new \
       --auto-tls \

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # local machine ip address
-export K8SHA_IPLOCAL=192.168.5.246
+export K8SHA_IPLOCAL=172.26.133.21
 
 # local machine etcd name, options: etcd1, etcd2, etcd3, etcd4, etcd5
 export K8SHA_ETCDNAME=etcd1
@@ -20,22 +20,22 @@ export K8SHA_KA_INTF=ens18
 #######################################
 
 # master keepalived virtual ip address
-export K8SHA_IPVIRTUAL=192.168.5.245
+export K8SHA_IPVIRTUAL=172.26.133.20
 
 # master01 ip address
-export K8SHA_IP1=192.168.5.246
+export K8SHA_IP1=172.26.133.21
 
 # master02 ip address
-export K8SHA_IP2=192.168.5.247
+export K8SHA_IP2=172.26.133.22
 
 # master03 ip address
-export K8SHA_IP3=192.168.5.248
+export K8SHA_IP3=172.26.133.23
 
 # master04 ip address
-export K8SHA_IP4=192.168.5.249
+export K8SHA_IP4=172.26.133.24
 
 # master05 ip address
-export K8SHA_IP5=192.168.5.250
+export K8SHA_IP5=172.26.133.25
 
 # master01 hostname
 export K8SHA_HOSTNAME1=hb-master01
@@ -53,10 +53,10 @@ export K8SHA_HOSTNAME4=hb-master04
 export K8SHA_HOSTNAME4=hb-master05
 
 # keepalived auth_pass config, all masters must be same
-export K8SHA_KA_AUTH=55df7dc334c90194d1600c483e10acfr
+export K8SHA_KA_AUTH=55df8dc654c90194d1600c483e10abfr
 
 # kubernetes cluster token, you can use 'kubeadm token generate' to get a new one
-export K8SHA_TOKEN=4ae6cb.9dbc7b3600a3de89
+export K8SHA_TOKEN=23a485.42ec1111963c9988
 
 # kubernetes CIDR pod subnet, if CIDR pod subnet is "10.244.0.0/16" please set to "10.244.0.0\\/16"
 export K8SHA_CIDR=10.244.0.0\\/16
@@ -74,7 +74,7 @@ sed \
 -e "s/K8SHA_IP2/$K8SHA_IP2/g" \
 -e "s/K8SHA_IP3/$K8SHA_IP3/g" \
 -e "s/K8SHA_IP4/$K8SHA_IP4/g" \
--e "s/K8SHA_IP4/$K8SHA_IP5/g" \
+-e "s/K8SHA_IP5/$K8SHA_IP5/g" \
 etcd/docker-compose.yaml.tpl > etcd/docker-compose.yaml
 
 echo 'set etcd cluster docker-compose.yaml file success: etcd/docker-compose.yaml'

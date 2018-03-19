@@ -18,7 +18,7 @@ services:
       --initial-advertise-peer-urls=http://K8SHA_IPLOCAL:2380 \
       --listen-peer-urls=http://0.0.0.0:2380 \
       --initial-cluster-token=9477af68bbee1b9ae037d6fd9e7efefd \
-      --initial-cluster=etcd1=http://K8SHA_IP1:2380,etcd2=http://K8SHA_IP2:2380,etcd3=http://K8SHA_IP3:2380,etcd4=http://K8SHA_IP4:2380, etcd5=http://K8SHA_IP4:2380 \
+      --initial-cluster=etcd1=http://K8SHA_IP1:2380,etcd2=http://K8SHA_IP2:2380,etcd3=http://K8SHA_IP3:2380,etcd4=http://K8SHA_IP4:2380,etcd5=http://K8SHA_IP5:2380 \
       --initial-cluster-state=new \
       --auto-tls \
       --peer-auto-tls \

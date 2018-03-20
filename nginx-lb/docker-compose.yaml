@@ -1,12 +1,12 @@
-version: '2.0'
-
+version: '2'
 services:
   etcd:
     image: nginx
     container_name: nginx-lb
     hostname: nginx-lb
     volumes:
-    - /root/kubeadm-multimaster/nginx-lb/nginx-lb.conf:/etc/nginx/nginx.conf
+    - /root/kubernetes-ha/nginx-lb/nginx-lb.conf:/etc/nginx/nginx.conf
     ports:
     - 16443:16443
     restart: always
+

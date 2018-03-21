@@ -5,7 +5,6 @@ systemctl restart docker && systemctl restart kubelet
 
 kubeadm reset
 
-rm -rf /var/lib/etcd-cluster
 
 docker-compose --file etcd/docker-compose.yaml stop
 docker-compose --file etcd/docker-compose.yaml rm -f

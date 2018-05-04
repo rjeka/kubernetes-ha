@@ -13,12 +13,12 @@ services:
     - 2379:2379
     restart: always
     command: ["sh", "-c", "etcd --name=etcd1 \
-      --advertise-client-urls=http://172.26.133.21:2379,http://172.26.133.21:4001 \
+      --advertise-client-urls=http://172.26.133.61:2379,http://172.26.133.61:4001 \
       --listen-client-urls=http://0.0.0.0:2379,http://0.0.0.0:4001 \
-      --initial-advertise-peer-urls=http://172.26.133.21:2380 \
+      --initial-advertise-peer-urls=http://172.26.133.61:2380 \
       --listen-peer-urls=http://0.0.0.0:2380 \
-      --initial-cluster-token=9488af68bbee1b9ae037d6fd9e7efefd \
-      --initial-cluster=etcd1=http://172.26.133.21:2380,etcd2=http://172.26.133.22:2380,etcd3=http://172.26.133.23:2380,etcd4=http://172.26.133.24:2380,etcd5=http://172.26.133.25:2380 \
+      --initial-cluster-token=9489bf68bbee1b9ae037d6fd9e7efefd \
+      --initial-cluster=etcd1=http://172.26.133.61:2380,etcd2=http://172.26.133.62:2380,etcd3=http://172.26.133.63:2380,etcd4=http://172.26.133.64:2380,etcd5=http://172.26.133.65:2380 \
       --initial-cluster-state=new \
       --auto-tls \
       --peer-auto-tls \

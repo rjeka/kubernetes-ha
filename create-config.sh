@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # local machine ip address
-export K8SHA_IPLOCAL=172.26.133.21
+export K8SHA_IPLOCAL=172.26.133.61
 
 # local machine etcd name, options: etcd1, etcd2, etcd3, etcd4, etcd5
 export K8SHA_ETCDNAME=etcd1
@@ -20,49 +20,50 @@ export K8SHA_KA_INTF=ens18
 #######################################
 
 # master keepalived virtual ip address
-export K8SHA_IPVIRTUAL=172.26.133.20
+export K8SHA_IPVIRTUAL=172.26.133.60
 
 # master01 ip address
-export K8SHA_IP1=172.26.133.21
+export K8SHA_IP1=172.26.133.61
 
 # master02 ip address
-export K8SHA_IP2=172.26.133.22
+export K8SHA_IP2=172.26.133.62
 
 # master03 ip address
-export K8SHA_IP3=172.26.133.23
+export K8SHA_IP3=172.26.133.63
 
 # master04 ip address
-export K8SHA_IP4=172.26.133.24
+export K8SHA_IP4=172.26.133.64
 
 # master05 ip address
-export K8SHA_IP5=172.26.133.25
+export K8SHA_IP5=172.26.133.65
 
 # master01 hostname
-export K8SHA_HOSTNAME1=hb-master01
+export K8SHA_HOSTNAME1=iri-master01
 
 # master02 hostname
-export K8SHA_HOSTNAME2=hb-master02
+export K8SHA_HOSTNAME2=iri-master02
 
 # master03 hostname
-export K8SHA_HOSTNAME3=hb-master03
+export K8SHA_HOSTNAME3=iri-master03
 
 # master04 hostname
-export K8SHA_HOSTNAME4=hb-master04
+export K8SHA_HOSTNAME4=iri-master04
 
 # master04 hostname
-export K8SHA_HOSTNAME5=hb-master05
+export K8SHA_HOSTNAME5=iri-master05
 
 # keepalived auth_pass config, all masters must be same
-export K8SHA_KA_AUTH=55df8dc654c90194d1600c483e10abfr
+export K8SHA_KA_AUTH=56cf8dc654c90194d1600c483e10abfr
 
 #etcd tocken:
-export ETCD_TOKEN=9488af68bbee1b9ae037d6fd9e7efefd
+export ETCD_TOKEN=9489bf68bbee1b9ae037d6fd9e7efefd
 
 # kubernetes cluster token, you can use 'kubeadm token generate' to get a new one
-export K8SHA_TOKEN=23a485.42ec1111963c9988
+export K8SHA_TOKEN=yf0t14.7ekahohaetbdphqg
 
 # kubernetes CIDR pod subnet, if CIDR pod subnet is "10.244.0.0/16" please set to "10.244.0.0\\/16"
 export K8SHA_CIDR=10.244.0.0\\/16
+
 
 
 ##############################

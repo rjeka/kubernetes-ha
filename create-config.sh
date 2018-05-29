@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # local machine ip address
-export K8SHA_IPLOCAL=172.26.133.61
+export K8SHA_IPLOCAL=172.26.133.21
 
 # local machine etcd name, options: etcd1, etcd2, etcd3, etcd4, etcd5
 export K8SHA_ETCDNAME=etcd1
@@ -62,6 +62,7 @@ export ETCD_TOKEN=9488af68bbee1b9ae037d6fd9e7efefd
 export K8SHA_TOKEN=23a485.42ec1111963c9988
 
 # kubernetes CIDR pod subnet, if CIDR pod subnet is "10.244.0.0/16" please set to "10.244.0.0\\/16"
+export K8SHA_CIDR=10.244.0.0\\/16
 
 
 ##############################

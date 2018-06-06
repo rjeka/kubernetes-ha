@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # local machine ip address
-export K8SHA_IPLOCAL=172.26.133.20
+export K8SHA_IPLOCAL=172.26.133.21
 
 # local machine etcd name, options: etcd1, etcd2, etcd3, etcd4, etcd5
 export K8SHA_ETCDNAME=etcd1
@@ -23,16 +23,16 @@ export K8SHA_KA_INTF=ens18
 export K8SHA_IPVIRTUAL=172.26.133.20
 
 # master01 ip address
-export K8SHA_IP1=172.26.133.20
+export K8SHA_IP1=172.26.133.21
 
 # master02 ip address
-export K8SHA_IP2=172.26.133.21
+export K8SHA_IP2=172.26.133.22
 
 # master03 ip address
-export K8SHA_IP3=172.26.133.22
+export K8SHA_IP3=172.26.133.23
 
 # master04 ip address
-export K8SHA_IP4=172.26.133.23
+export K8SHA_IP4=172.26.133.24
 
 # master05 ip address
 export K8SHA_IP5=172.26.133.25

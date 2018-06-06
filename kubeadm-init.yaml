@@ -1,27 +1,27 @@
 apiVersion: kubeadm.k8s.io/v1alpha1
 kind: MasterConfiguration
-kubernetesVersion: v1.9.1
+kubernetesVersion: v1.10.0
 networking:
   podSubnet: 10.244.0.0/16
 apiServerCertSANs:
-- iri-master01
-- iri-master02
-- iri-master03
-- iri-master04
-- iri-master05
-- 172.26.133.61
-- 172.26.133.62
-- 172.26.133.63
-- 172.26.133.64
-- 172.26.133.65
-- 172.26.133.60
+- hb-master01
+- hb-master02
+- hb-master03
+- hb-master04
+- hb-master05
+- 172.26.133.21
+- 172.26.133.22
+- 172.26.133.23
+- 172.26.133.24
+- 172.26.133.25
+- 172.26.133.20
 - 127.0.0.1
 etcd:
   endpoints:
-  - http://172.26.133.61:2379
-  - http://172.26.133.62:2379
-  - http://172.26.133.63:2379
-  - http://172.26.133.64:2379
-  - http://172.26.133.65:2379
+  - http://172.26.133.21:2379
+  - http://172.26.133.22:2379
+  - http://172.26.133.23:2379
+  - http://172.26.133.24:2379
+  - http://172.26.133.25:2379
 token: yf0t14.7ekahohaetbdphqg
 tokenTTL: "0"

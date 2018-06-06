@@ -14,7 +14,7 @@ spec:
     port: 443
     targetPort: 443
     protocol: TCP
- externalIPs:
+  externalIPs:
   - K8SHA_IPVIRTUAL
   selector:
     app: ingress-nginx

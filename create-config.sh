@@ -53,20 +53,13 @@ export K8SHA_HOSTNAME4=hb-master04
 export K8SHA_HOSTNAME5=hb-master05
 
 # keepalived auth_pass config, all masters must be same
-<<<<<<< HEAD
 export K8SHA_KA_AUTH=56cf8dd754c90194d1600c483e10abfr
 
 #etcd tocken:
 export ETCD_TOKEN=9489bf68bdfe1b9ae037d6fd9e7efefd
-=======
-export K8SHA_KA_AUTH=55df8dc654c90194d1600c483e10abfr
-
-#etcd tocken:
-export ETCD_TOKEN=9488af68bbee1b9ae037d6fd9e7efefd
->>>>>>> 715139dbbc120d465043b1e9ba43bfcf3e00c76f
 
 # kubernetes cluster token, you can use 'kubeadm token generate' to get a new one
-export K8SHA_TOKEN=23a485.42ec1111963c9988
+export K8SHA_TOKEN=yf0t14.7ekahohaetbdphqg
 
 # kubernetes CIDR pod subnet, if CIDR pod subnet is "10.244.0.0/16" please set to "10.244.0.0\\/16"
 export K8SHA_CIDR=10.244.0.0\\/16
@@ -133,6 +126,13 @@ sed \
 -e "s/K8SHA_TOKEN/$K8SHA_TOKEN/g" \
 -e "s/K8SHA_CIDR/$K8SHA_CIDR/g" \
 kubeadm-init.yaml.tpl > kubeadm-init.yaml
+
+sed \
+-e "s/K8SHA_IPVIRTUAL/$K8SHA_IPVIRTUAL/g" \
+kube-ingress/service-nodeport.yaml.tpl > kube-ingress/service-nodeport.yaml
+
+
+
 
 echo 'set kubeadm init config file success: kubeadm-init.yaml'
 

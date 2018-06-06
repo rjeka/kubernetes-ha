@@ -1,6 +1,6 @@
 apiVersion: kubeadm.k8s.io/v1alpha1
 kind: MasterConfiguration
-kubernetesVersion: v1.10.0
+kubernetesVersion: v1.10.3
 networking:
   podSubnet: 10.244.0.0/16
 apiServerCertSANs:
@@ -23,9 +23,5 @@ etcd:
   - http://172.26.133.23:2379
   - http://172.26.133.24:2379
   - http://172.26.133.25:2379
-<<<<<<< HEAD
 token: yf0t14.7ekahohaetbdphqg
-=======
-token: 23a485.42ec1111963c9988
->>>>>>> 715139dbbc120d465043b1e9ba43bfcf3e00c76f
 tokenTTL: "0"

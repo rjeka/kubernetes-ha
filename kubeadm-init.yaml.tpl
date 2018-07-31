@@ -1,5 +1,8 @@
 apiVersion: kubeadm.k8s.io/v1alpha1
 kind: MasterConfiguration
+api:
+  advertiseAddress: K8SHA_IPVIRTUAL
+  controlPlaneEndpoint: K8SHA_IPVIRTUAL
 networking:
   podSubnet: K8SHA_CIDR
 apiServerCertSANs:
@@ -22,5 +25,7 @@ etcd:
   - http://K8SHA_IP3:2379
   - http://K8SHA_IP4:2379
   - http://K8SHA_IP5:2379
+piServerExtraArgs:
+  apiserver-count: "3"
 token: K8SHA_TOKEN
 tokenTTL: "0"

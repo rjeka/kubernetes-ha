@@ -8,6 +8,3 @@
 
 Sorry, this code is not working now.
 Kubeadm changed the API
-
-
-Описание по развертыванию на русском языке https://habr.com/post/358264/
